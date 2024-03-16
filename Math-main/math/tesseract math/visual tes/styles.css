@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    perspective: 1000px;
+    background-color: #000;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh;
+}
+
+.container {
+    width: 200px; /* Adjust the size of the tesseract */
+    height: 200px; /* Adjust the size of the tesseract */
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.tesseract {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotateTesseract 10s linear infinite;
+}
+
+.face {
+    width: 100%; /* Adjust the size of each face */
+    height: 100%; /* Adjust the size of each face */
+    position: absolute;
+    border: 1px solid;
+    opacity: 0.7;
+}
+
+/* Styles for each face */
+.face:nth-child(1) { border-color: #ff0000; transform: rotateY(0deg) translateZ(100px); }
+.face:nth-child(2) { border-color: #00ff00; transform: rotateY(90deg) translateZ(100px); }
+.face:nth-child(3) { border-color: #0000ff; transform: rotateY(180deg) translateZ(100px); }
+.face:nth-child(4) { border-color: #ffff00; transform: rotateY(-90deg) translateZ(100px); }
+.face:nth-child(5) { border-color: #ff00ff; transform: rotateX(90deg) translateZ(100px); }
+.face:nth-child(6) { border-color: #00ffff; transform: rotateX(-90deg) translateZ(100px); }
+.face:nth-child(7) { border-color: #ffffff; transform: rotateY(45deg) rotateX(45deg) translateZ(100px); }
+.face:nth-child(8) { border-color: #ff8000; transform: rotateY(-45deg) rotateX(45deg) translateZ(100px); }
+.face:nth-child(9) { border-color: #8000ff; transform: rotateY(45deg) rotateX(-45deg) translateZ(100px); }
+.face:nth-child(10) { border-color: #0080ff; transform: rotateY(-45deg) rotateX(-45deg) translateZ(100px); }
+.face:nth-child(11) { border-color: #00ff80; transform: rotateY(135deg) rotateX(45deg) translateZ(100px); }
+.face:nth-child(12) { border-color: #800000; transform: rotateY(-135deg) rotateX(45deg) translateZ(100px); }
+
+/* Animation */
+@keyframes rotateTesseract {
+    from { transform: rotateX(0deg) rotateY(0deg); }
+    to { transform: rotateX(360deg) rotateY(360deg); }
+}

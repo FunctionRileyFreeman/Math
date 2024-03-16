@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schrödinger's Equation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="home-button"><a href="http://127.0.0.1:5500/main/index.html" class="home-link">Back to Home</a></button>
+    
+    <header>
+        <h1>Schrödinger's Equation</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#description">Description</a></li>
+            <li><a href="#equation">Equation</a></li>
+            <li><a href="#applications">Applications</a></li>
+            <li><a href="#cat-problem">Schrödinger's Cat Problem</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="description">
+            <h2>Description</h2>
+            <p>Schrödinger's equation is a fundamental equation in quantum mechanics that describes how the quantum state of a physical system changes over time. It was formulated by the Austrian physicist Erwin Schrödinger in 1925.</p>
+            <p>The equation is essential for understanding the behavior of microscopic particles such as electrons in atoms and molecules. It provides a mathematical framework for predicting the probabilistic distribution of particle properties such as position, momentum, and energy.</p>
+        </section>
+
+
+        <section id="equation">
+            <h2>Equation</h2>
+            <p>Schrödinger's equation is a fundamental equation in quantum mechanics that describes how the quantum state of a physical system changes over time. It was formulated by the Austrian physicist Erwin Schrödinger in 1925.</p>
+            <p>The equation is typically written as:</p>
+            <p class="math">
+                <span class="math-equation">i <span class="math-operator">ħ</span> <span class="math-variable">∂</span>/<span class="math-variable">∂</span>t Ψ(<span class="math-variable">r</span>, t) = <span class="math-operator">Ĥ</span> Ψ(<span class="math-variable">r</span>, t)</span>
+            </p>
+            <p>Where:</p>
+            <ul>
+                <li><strong>i:</strong> The imaginary unit.</li>
+                <li><strong>ħ (h-bar):</strong> The reduced Planck constant (h/2π).</li>
+                <li><strong>Ψ (Psi):</strong> The wave function of the system, describing its quantum state as a function of position (r) and time (t).</li>
+                <li><strong>∂/∂t:</strong> The partial derivative with respect to time.</li>
+                <li><strong>Ĥ (H-hat):</strong> The Hamiltonian operator, representing the total energy of the system.</li>
+            </ul>
+            <p>This equation essentially states that the time rate of change of the wave function Ψ is proportional to the energy operator Ĥ acting on Ψ, where the proportionality constant is iħ.</p>
+            <p>The wave function Ψ contains all the information about the system, including its position, momentum, and other physical properties. The square of the magnitude of the wave function (|Ψ|^2) gives the probability density of finding a particle described by that wave function at a particular position and time.</p>
+            <p>The Schrödinger equation is a cornerstone of quantum mechanics and is used to predict the behavior of quantum systems, such as atoms, molecules, and subatomic particles.</p>
+        </section>
+
+        <section id="applications">
+            <h2>Applications</h2>
+            <p>Schrödinger's equation has numerous applications in various fields of physics and chemistry:</p>
+            <ul>
+                <li><strong>Atomic Structure:</strong> It helps in understanding the energy levels and behavior of electrons in atoms, leading to the development of atomic models.</li>
+                <li><strong>Molecular Dynamics:</strong> It allows the calculation of molecular wave functions, facilitating the study of chemical bonding and molecular properties.</li>
+                <li><strong>Quantum Mechanics:</strong> It forms the basis for quantum mechanics and provides insights into wave-particle duality, quantum tunneling, and the uncertainty principle.</li>
+                <li><strong>Nanotechnology:</strong> It is essential for modeling and simulating quantum behavior in nanostructures, enabling the design of nanoelectronic devices and materials.</li>
+            </ul>
+            <p>Overall, Schrödinger's equation revolutionized our understanding of the microscopic world, paving the way for numerous technological advancements and discoveries in quantum physics and related fields.</p>
+        </section>
+
+        <section id="cat-problem">
+            <h2>Schrödinger's Cat Problem</h2>
+            <div class="container">
+                <div class="box">
+                    <div class="cat" id="cat"></div>
+                    <p id="cat-state"></p>
+                </div>
+                <button onclick="changeCatState()">Open the box</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Schrödinger's Equation. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
